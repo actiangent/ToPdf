@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="452.0" prefWidth="965.0"
+            xmlns="http://javafx.com/javafx/11.0.2">
+    <TableView fx:id="documentFileTableView" layoutX="24.0" layoutY="43.0" prefHeight="302.0" prefWidth="756.0">
+        <columns>
+            <TableColumn prefWidth="315.0" text="File Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fileName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="125.0" text="File Extension/Type">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fileExtension"/>
+                </cellValueFactory>
+                <style>
+                    "-fx-alignment: CENTER;"
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="125.0" text="Size">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fileSize"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="documentFileIsConvertedTableColumn" prefWidth="125.0" text="Converted">
+                <cellValueFactory>
+                    <PropertyValueFactory property="isConverted"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button fx:id="chooseFileButton" layoutX="817.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0"
+            prefWidth="133.0" text="Select Document"/>
+    <Button fx:id="convertSelectedDocumentButton" layoutX="817.0" layoutY="169.0" mnemonicParsing="false"
+            prefHeight="25.0" prefWidth="133.0" text="Convert Document"/>
+    <Button fx:id="convertAllDocumentButton" layoutX="817.0" layoutY="206.0" mnemonicParsing="false"
+            text="Convert All Document"/>
+    <Label layoutX="24.0" layoutY="14.0" prefHeight="17.0" prefWidth="945.0" text="Converted Documents Folder Path"/>
+</AnchorPane>
